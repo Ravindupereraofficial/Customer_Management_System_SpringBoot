@@ -1,221 +1,197 @@
-/* General styling */
+:root {
+    --pastel-blue: #A8D8EA;
+    --pastel-blue-dark: #8CC0D4;
+    --pastel-mint: #98FB98;
+    --pastel-mint-dark: #7CD97C;
+    --pastel-pink: #FFB6C1;
+    --pastel-pink-dark: #EBA4AF;
+    --pastel-lavender: #DDA0DD;
+    --pastel-lavender-dark: #C98DC9;
+    --pastel-peach: #FFDAB9;
+    --pastel-peach-dark: #EEC9A8;
+    --background-start: #F8F9FF;
+    --background-end: #E6F3FF;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 20px;
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
-    color: #333;
+    padding: 25px;
+    background: linear-gradient(135deg, var(--background-start), var(--background-end));
+    color: #4A4A4A;
     line-height: 1.6;
 }
 
-/* Container for form and tables */
 h2 {
-    color: #2c3e50;
-    margin-bottom: 20px;
-    font-size: 24px;
+    color: #6C7A89;
+    margin: 30px 0 20px;
+    font-size: 26px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid var(--pastel-blue);
+    padding-bottom: 8px;
 }
 
-/* Form styling */
 form {
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.9);
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: 0 auto 30px;
+    max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 form:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 form input {
     width: 100%;
-    padding: 12px;
+    padding: 12px 15px;
     margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-sizing: border-box;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
     font-size: 16px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 form input:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+    border-color: var(--pastel-blue);
+    box-shadow: 0 0 10px rgba(168, 216, 234, 0.3);
     outline: none;
 }
 
 form button {
     width: 100%;
-    padding: 12px;
-    background-color: #3498db;
-    color: white;
+    padding: 14px;
+    margin-top: 15px;
     border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    border-radius: 8px;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-form button:hover {
-    background-color: #2980b9;
+#customer-form button {
+    background: var(--pastel-blue);
+    color: #2C3E50;
+}
+
+#customer-form button:hover {
+    background: var(--pastel-blue-dark);
     transform: translateY(-2px);
 }
 
-/* Table Styling */
 table {
     width: 100%;
-    margin-bottom: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
     border-collapse: collapse;
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-table:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-table th,
-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 table th {
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+    background: var(--pastel-blue);
+    color: #2C3E50;
+    padding: 16px;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
 }
 
-table tbody tr {
-    transition: background-color 0.3s ease;
+table td {
+    padding: 14px;
+    border-bottom: 1px solid #F0F0F0;
 }
 
 table tbody tr:hover {
-    background-color: #f1f1f1;
+    background-color: rgba(168, 216, 234, 0.08);
 }
 
-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+input[type="text"], input[type="number"] {
+    padding: 12px 15px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    max-width: 300px;
 }
 
-/* Search Input and Button */
-#search-input,
-#search-id-input,
-#delete-id-input,
-#update-id-input {
-    padding: 12px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    width: 200px;
-    font-size: 16px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#search-input:focus,
-#search-id-input:focus,
-#delete-id-input:focus,
-#update-id-input:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
-    outline: none;
-}
-
-#search-btn,
-#search-id-btn,
-#delete-search-btn,
-#update-search-btn,
-#delete-id-btn {
-    padding: 12px 20px;
-    background-color: #3498db;
-    color: white;
+button:not(form button) {
+    padding: 12px 25px;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-#search-btn:hover,
-#search-id-btn:hover,
-#delete-search-btn:hover,
-#update-search-btn:hover,
-#delete-id-btn:hover {
-    background-color: #2980b9;
+#search-id-btn, #delete-search-btn, #update-search-btn {
+    background: var(--pastel-mint);
+    color: #2C3E50;
+}
+
+#search-id-btn:hover, #delete-search-btn:hover, #update-search-btn:hover {
+    background: var(--pastel-mint-dark);
     transform: translateY(-2px);
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+#delete-id-btn {
+    background: var(--pastel-pink);
+    color: #2C3E50;
 }
 
-/* Apply fadeIn animation to tables and forms */
-form,
-table {
-    animation: fadeIn 0.8s ease-out;
+#delete-id-btn:hover {
+    background: var(--pastel-pink-dark);
+    transform: translateY(-2px);
 }
 
-/* Button hover animation */
-button {
-    position: relative;
-    overflow: hidden;
+#update-form button {
+    background: var(--pastel-lavender);
+    color: #2C3E50;
 }
 
-button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: transform 0.5s ease;
+#update-form button:hover {
+    background: var(--pastel-lavender-dark);
+    transform: translateY(-2px);
 }
 
-button:hover::after {
-    transform: translate(-50%, -50%) scale(1);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-    form input,
-    #search-input,
-    #search-id-input,
-    #delete-id-input,
-    #update-id-input {
-        width: 100%;
-        margin-right: 0;
+    body {
+        padding: 15px;
     }
-
-    #search-btn,
-    #search-id-btn,
-    #delete-search-btn,
-    #update-search-btn,
-    #delete-id-btn {
+    
+    form {
+        padding: 20px;
+    }
+    
+    input[type="text"], input[type="number"] {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    button:not(form button) {
         width: 100%;
         margin-top: 10px;
     }
+    
+    table {
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+form, table {
+    animation: fadeIn 0.6s ease-out;
 }
