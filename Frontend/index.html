@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Add Customer</h2>
+    <form id="customer-form">
+        <input type="text" id="id" placeholder="ID" required>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="number" id="salary" placeholder="Salary" required>
+        <button type="submit">Add Customer</button>
+    </form>
+
+    <h2>View Customers</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>  
+                <th>Name</th>  
+                <th>Address</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody id="tbl-body"></tbody>
+    </table>
+
+    <h2>Search Customer</h2>
+    <input type="text" id="search-id-input" placeholder="Enter ID">
+    <button id="search-id-btn">Search</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>  
+                <th>Name</th>  
+                <th>Address</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody id="search-tbl-body"></tbody>
+    </table>
+
+    <h2>Delete Customer</h2>
+    <input type="text" id="delete-id-input" placeholder="Enter ID">
+    <button id="delete-search-btn">Search</button>
+    <button id="delete-id-btn">Delete</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>  
+                <th>Name</th>  
+                <th>Address</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody id="delete-tbl-body"></tbody>
+    </table>
+
+    <h2>Update Customer</h2>
+<input type="text" id="update-id-input" placeholder="Enter ID">
+<button id="update-search-btn">Search</button>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>  
+            <th>Name</th>  
+            <th>Address</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody id="update-tbl-body"></tbody>
+</table>
+<form id="update-form">
+    <input type="text" id="update-name" placeholder="Name">
+    <input type="text" id="update-address" placeholder="Address">
+    <input type="number" id="update-salary" placeholder="Salary">
+    <button type="submit">Update Customer</button>
+</form>
+
+    <script src="app.js"></script>
+</body>
+</html>
